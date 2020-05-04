@@ -84,7 +84,7 @@ export function getWordQueue(value: string): PositionTick[] {
       res.push(LetterErrorTick);
       res.push({
         ...LetterPauseTick,
-        letter: '?'
+        letter: '?',
       });
       return;
     }
@@ -103,4 +103,12 @@ export function getWordQueue(value: string): PositionTick[] {
   });
   res.push(LetterPauseTick);
   return res;
+}
+
+export function getRandomWordQueue(length: number = 20) {
+  const word = Array(length).fill(1).map(() => {
+    const index = Math.floor(Math.random() * AlphaBet.length);
+    return AlphaBet[index];
+  }).join('');
+  return getWordQueue(word);
 }

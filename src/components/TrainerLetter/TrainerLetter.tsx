@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { useSelector } from 'react-redux';
 import { selectConfigStore } from '../../state/config.selectors';
 
-const CssPositionMap = {
+export const CssPositionMap = {
   [PositionTypes.Left]: CSS.Left,
   [PositionTypes.Right]: CSS.Right,
   [PositionTypes.Top]: CSS.Top,
