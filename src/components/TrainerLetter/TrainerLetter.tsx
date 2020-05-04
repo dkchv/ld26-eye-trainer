@@ -14,9 +14,9 @@ const CssPositionMap = {
 
 export function TrainerLetter() {
   const [ config ] = useConfigReducer();
-  const [ word, setWord ] = useState('Привет');
+  const [ word ] = useState('Привет');
 
-  const [queue] = useState(getWordQueue(word));
+  const [queue] = useState(() => getWordQueue(word));
   const [queueIndex, setQueueIndex] = useState(0);
 
   const current = queue[queueIndex];

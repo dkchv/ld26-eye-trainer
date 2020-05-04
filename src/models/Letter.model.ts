@@ -48,17 +48,15 @@ export const LetterPositionMap2: PositionTypes[][] = [
   [ PositionTypes.Right, PositionTypes.Right, PositionTypes.Top ], // Я
 ];
 
-export const LetterNotFoundQueue = [ PositionTypes.Center ];
-
-export function getLetterQueue(value: string): PositionTypes[] {
+export function getLetterQueue(value: string): PositionTypes[] | null {
   if (!value) {
     console.warn('can\'t get queue for no value', value);
-    return LetterNotFoundQueue;
+    return null;
   }
   const letterIndex = AlphaBet.indexOf(value.toUpperCase());
   if (letterIndex === -1) {
     console.warn('queue for letter not found', value);
-    return LetterNotFoundQueue;
+    return null;
   }
   return LetterPositionMap2[letterIndex];
 }
@@ -81,7 +79,16 @@ export function getWordQueue(value: string): PositionTick[] {
   const res = [ LetterPauseTick ];
 
   Array.from(value).forEach((letter: string, index) => {
-    getLetterQueue(letter).forEach((position) => {
+    const letterQueue = getLetterQueue(letter);
+    if (!letterQueue) {
+      res.push(LetterErrorTick);
+      res.push({
+        ...LetterPauseTick,
+        letter: '?'
+      });
+      return;
+    }
+    letterQueue.forEach((position) => {
       res.push({
         letter,
         position,
@@ -95,5 +102,7 @@ export function getWordQueue(value: string): PositionTick[] {
     });
   });
   res.push(LetterPauseTick);
+
+  console.log('--rr', res)
   return res;
 }
