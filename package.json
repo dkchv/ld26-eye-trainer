@@ -23,8 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "PUBLIC_URL=https://dkchv.github.io/ld26-eye-trainer/ gh-pages -d build"
+    "predeploy": "PUBLIC_URL=https://dkchv.github.io/ld26-eye-trainer/ yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
