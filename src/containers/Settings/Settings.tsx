@@ -14,9 +14,8 @@ export function Settings() {
 
   return (
     <div>
-      <div>type: {config.type}</div>
-      <button onClick={handleClick}>letter -> eyes</button>
-      <button onClick={handleClick}>eyes -> letter</button>
+      <div className='row'>type: {config.type}</div>
+      <div className='row'>speed: {config.speed} ms</div>
     </div>
   );
 }
