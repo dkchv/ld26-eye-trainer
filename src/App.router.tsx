@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 import React from 'react';
-import { Settings } from './components/Settings/Settings';
-import { Trainer } from './components/Trainer/Trainer';
+import { Settings } from './containers/Settings/Settings';
+import { Trainer } from './containers/Trainer/Trainer';
 
 export function AppRouter() {
   return (

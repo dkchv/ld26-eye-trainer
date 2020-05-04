@@ -15,7 +15,6 @@ export function Menu({ title }: MenuProps) {
     setIsBack(location.pathname !== '/');
   }, [location]);
 
-  console.log('--', location)
   return (
     <div className={`${CSS.root} d-flex ai-center fg-1`}>
       <div className={`${CSS.back} fg-0`}>
