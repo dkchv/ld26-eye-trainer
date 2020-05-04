@@ -3,7 +3,8 @@ import { ConfigAction, ConfigActionTypes } from './config.action';
 import { TrainerConfig, TrainerTypes } from '../models/Trainer.model';
 
 const initialState: TrainerConfig = {
-  type: TrainerTypes.MovementToWord,
+  type: TrainerTypes.LetterToMovement,
+  speed: 2000,
 };
 
 function reducer(state: TrainerConfig, action: ConfigAction) {

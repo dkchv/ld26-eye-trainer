@@ -1,9 +1,10 @@
 
 export enum TrainerTypes {
-  WordToMovement = 'WordToMovement',
-  MovementToWord = 'MovementToWord',
+  LetterToMovement = 'LetterToMovement',
+  MovementToLetter = 'MovementToLetter',
 }
 
 export interface TrainerConfig {
   type: TrainerTypes,
+  speed: number, // in ms
 }

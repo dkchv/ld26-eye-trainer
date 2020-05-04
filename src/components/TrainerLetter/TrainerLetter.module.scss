@@ -1,0 +1,69 @@
+@import "../../styles/variables";
+
+.root {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  padding: 0 1rem 1rem;
+}
+
+.area {
+  position: relative;
+}
+
+.wordLetter {
+  display: inline;
+  color: lighten($color-background, 10%);
+
+  &.isActive {
+    color: lighten($color-background, 30%);
+  }
+}
+
+.letterBG {
+  position: absolute;
+  color: darken($color-background, 2%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 50vh;
+  z-index: 1;
+}
+
+.pointer {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: $color-foreground;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  z-index: 2;
+
+  &.Center {
+    left: 50%;
+    top: 50%;
+  }
+
+  &.Left {
+    left: 0;
+    top: 50%;
+  }
+
+  &.Right {
+    left: 100%;
+    top: 50%;
+  }
+
+  &.Top {
+    left: 50%;
+    top: 0;
+  }
+
+  &.Bottom {
+    left: 50%;
+    top: 100%;
+  }
+}

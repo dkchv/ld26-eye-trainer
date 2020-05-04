@@ -6,7 +6,7 @@ export function Layout({ children }) {
   return (
     <div className={CSS.root}>
       <div className={CSS.menu}>
-        <Menu title='title' />
+        <Menu title='Eye Trainer' />
       </div>
       <div className={CSS.content}>{children}</div>
     </div>

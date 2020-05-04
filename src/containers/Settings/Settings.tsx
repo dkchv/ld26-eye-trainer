@@ -8,7 +8,7 @@ export function Settings() {
 
   const handleClick = useCallback(() => {
     dispatch(new ConfigUpdate({
-      type: TrainerTypes.MovementToWord,
+      type: TrainerTypes.MovementToLetter,
     }))
   }, [dispatch]);
 

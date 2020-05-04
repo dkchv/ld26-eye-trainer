@@ -6,7 +6,7 @@ export enum ConfigActionTypes {
 
 export class ConfigUpdate {
   readonly type = ConfigActionTypes.ConfigUpdate;
-  constructor(public payload: TrainerConfig) {}
+  constructor(public payload: Partial<TrainerConfig>) {}
 }
 
 export type ConfigAction = ConfigUpdate;
