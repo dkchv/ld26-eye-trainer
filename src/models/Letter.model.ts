@@ -6,6 +6,12 @@ export enum PositionTypes {
   Center = 'Center',
 }
 
+export interface PositionTick {
+  letter: string;
+  index?: number; // of letter
+  position: PositionTypes;
+}
+
 export const AlphaBet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЭЮЯ';
 
 export const LetterPositionMap2: PositionTypes[][] = [
@@ -49,7 +55,7 @@ export function getLetterQueue(value: string): PositionTypes[] {
     console.warn('can\'t get queue for no value', value);
     return LetterNotFoundQueue;
   }
-  const letterIndex = AlphaBet.indexOf(value);
+  const letterIndex = AlphaBet.indexOf(value.toUpperCase());
   if (letterIndex === -1) {
     console.warn('queue for letter not found', value);
     return LetterNotFoundQueue;
@@ -57,4 +63,37 @@ export function getLetterQueue(value: string): PositionTypes[] {
   return LetterPositionMap2[letterIndex];
 }
 
-export const LetterPositionMap = {};
+
+export const LetterErrorTick: PositionTick = {
+  letter: '?',
+  position: PositionTypes.Center,
+};
+
+export const LetterPauseTick: PositionTick = {
+  letter: '',
+  position: PositionTypes.Center,
+};
+
+export function getWordQueue(value: string): PositionTick[] {
+  if (!value) {
+    return [ LetterErrorTick ];
+  }
+  const res = [ LetterPauseTick ];
+
+  Array.from(value).forEach((letter: string, index) => {
+    getLetterQueue(letter).forEach((position) => {
+      res.push({
+        letter,
+        position,
+        index,
+      });
+      res.push({
+        letter,
+        position: PositionTypes.Center,
+        index,
+      });
+    });
+  });
+  res.push(LetterPauseTick);
+  return res;
+}

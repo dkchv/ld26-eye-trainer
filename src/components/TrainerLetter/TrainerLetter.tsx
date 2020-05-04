@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import CSS from './TrainerLetter.module.scss';
-import { getLetterQueue, LetterPositionMap, PositionTypes } from '../../models/Letter.model';
+import { getWordQueue, PositionTypes } from '../../models/Letter.model';
 import { useConfigReducer } from '../../state/config.reducer';
 import classNames from 'classnames';
 
@@ -16,34 +16,14 @@ export function TrainerLetter() {
   const [ config ] = useConfigReducer();
   const [ word, setWord ] = useState('Привет');
 
-  const [ letter, setLetter ] = useState(word[0]);
-  const [ letterIndex, setLetterIndex ] = useState(0);
+  const [queue] = useState(getWordQueue(word));
+  const [queueIndex, setQueueIndex] = useState(0);
 
-  const [ position, setPosition ] = useState(PositionTypes.Center);
-  const [ positionIndex, setPositionIndex ] = useState(-1);
-
-  const handleNextLetter = useCallback(() => {
-    const nextLetterIndex = (letterIndex + 1) % word.length;
-    const nextLetter = word[nextLetterIndex].toUpperCase();
-    setLetter(nextLetter);
-    setLetterIndex(nextLetterIndex);
-    // reset
-    setPositionIndex(0);
-    setPosition(getLetterQueue(nextLetter)[0]);
-  }, [ letterIndex, word ]);
+  const current = queue[queueIndex];
 
   const handleNextMovement = useCallback(() => {
-    const nextPositionIndex = positionIndex + 1;
-    const queue = getLetterQueue(letter);
-
-    if (nextPositionIndex >= queue.length) {
-      handleNextLetter();
-      return;
-    }
-
-    setPosition(queue[nextPositionIndex]);
-    setPositionIndex(nextPositionIndex);
-  }, [ positionIndex, letter, handleNextLetter ]);
+    setQueueIndex((prev) => (prev + 1) % queue.length)
+  }, [queue]);
 
   useEffect(() => {
     const timer = setInterval(handleNextMovement, config.speed);
@@ -60,13 +40,13 @@ export function TrainerLetter() {
       <div className='row fg-0 text-center'>
         {Array.from(word).map((item, index) => (
           <div className={classNames(CSS.wordLetter, {
-            [CSS.isActive]: index === letterIndex,
+            [CSS.isActive]: index === current.index,
           })} key={index}>{item}</div>
         ))}
       </div>
       <div className={`${CSS.area} row fg-1`}>
-        <div className={CSS.letterBG}>{letter}</div>
-        <div className={`${CSS.pointer} ${CssPositionMap[position]}`} style={{
+        <div className={CSS.letterBG}>{current.letter}</div>
+        <div className={`${CSS.pointer} ${CssPositionMap[current.position]}`} style={{
           transition: `all ${config.speed}ms`,
         }} />
       </div>

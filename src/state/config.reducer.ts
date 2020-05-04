@@ -4,7 +4,7 @@ import { TrainerConfig, TrainerTypes } from '../models/Trainer.model';
 
 const initialState: TrainerConfig = {
   type: TrainerTypes.LetterToMovement,
-  speed: 2000,
+  speed: 600,
 };
 
 function reducer(state: TrainerConfig, action: ConfigAction) {
