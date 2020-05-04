@@ -8,8 +8,6 @@ import { selectConfigStore } from '../../state/config.selectors';
 export function Trainer() {
   const config = useSelector(selectConfigStore);
 
-  console.log('--co', config.type)
-
   switch (config.type) {
     case TrainerTypes.LetterToMovement:
       return <TrainerLetter />
