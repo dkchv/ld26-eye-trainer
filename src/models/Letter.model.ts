@@ -102,7 +102,5 @@ export function getWordQueue(value: string): PositionTick[] {
     });
   });
   res.push(LetterPauseTick);
-
-  console.log('--rr', res)
   return res;
 }

@@ -1,13 +1,12 @@
-import { useReducer } from 'react';
-import { ConfigAction, ConfigActionTypes } from './config.action';
+import { ConfigActionTypes } from './config.action';
 import { TrainerConfig, TrainerTypes } from '../models/Trainer.model';
 
 const initialState: TrainerConfig = {
-  type: TrainerTypes.LetterToMovement,
+  type: TrainerTypes.RandomLetter,
   speed: 600,
 };
 
-function reducer(state: TrainerConfig, action: ConfigAction) {
+export function configReducer(state: TrainerConfig = initialState, action) {
   switch (action.type) {
     case ConfigActionTypes.ConfigUpdate:
       return {
@@ -17,8 +16,4 @@ function reducer(state: TrainerConfig, action: ConfigAction) {
     default:
       return state;
   }
-}
-
-export function useConfigReducer() {
-  return useReducer(reducer, initialState);
 }

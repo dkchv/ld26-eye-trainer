@@ -1,8 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import CSS from './TrainerLetter.module.scss';
 import { getWordQueue, PositionTypes } from '../../models/Letter.model';
-import { useConfigReducer } from '../../state/config.reducer';
 import classNames from 'classnames';
+import { useSelector } from 'react-redux';
+import { selectConfigStore } from '../../state/config.selectors';
 
 const CssPositionMap = {
   [PositionTypes.Left]: CSS.Left,
@@ -13,7 +14,7 @@ const CssPositionMap = {
 };
 
 export function TrainerLetter() {
-  const [ config ] = useConfigReducer();
+  const config = useSelector(selectConfigStore);
   const [ word ] = useState('Привет');
 
   const [queue] = useState(() => getWordQueue(word));

@@ -1,15 +1,23 @@
 import React from 'react';
-import { useConfigReducer } from '../../state/config.reducer';
 import { TrainerTypes } from '../../models/Trainer.model';
 import { TrainerLetter } from '../../components/TrainerLetter/TrainerLetter';
+import { TrainerRandomLetter } from '../../components/TrainerRandomLetter/TrainerRandomLetter';
+import { useSelector } from 'react-redux';
+import { selectConfigStore } from '../../state/config.selectors';
 
 export function Trainer() {
-  const [config] = useConfigReducer();
+  const config = useSelector(selectConfigStore);
+
+  console.log('--co', config.type)
 
   switch (config.type) {
     case TrainerTypes.LetterToMovement:
       return <TrainerLetter />
     case TrainerTypes.MovementToLetter:
+      return <TrainerLetter />;
+    case TrainerTypes.RandomLetter:
+      return <TrainerRandomLetter />;
+    default:
       return <TrainerLetter/>;
   }
 }

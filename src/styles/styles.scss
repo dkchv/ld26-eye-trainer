@@ -4,7 +4,12 @@
 @import "button";
 @import "box";
 @import "text";
+@import "form";
 
 .debug {
   border: 1px solid red;
+}
+
+.pointer {
+  cursor: pointer;
 }
