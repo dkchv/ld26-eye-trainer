@@ -44,7 +44,6 @@ export function TrainerMovement() {
   }, [ letters, movements, handleNewPosition ]);
 
   const handleKeyPress = useCallback((e) => {
-    console.log('--e', e.keyCode)
     if (e.keyCode === KEY_CODE_ESC) {
       // reset
       if (movements.length > 0) {
