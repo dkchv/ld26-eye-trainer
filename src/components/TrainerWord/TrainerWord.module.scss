@@ -52,6 +52,7 @@
   border: 1px solid $color-blue;
   z-index: 2;
   cursor: pointer;
+  user-select: none;
 }
 
 .pointer,
