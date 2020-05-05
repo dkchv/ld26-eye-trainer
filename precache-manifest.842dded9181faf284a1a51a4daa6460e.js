@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "92e04b2c585ab669529758623108fa8c",
+    "revision": "50245a27afd7ef0271a24083b8fd5b26",
     "url": "https://dkchv.github.io/ld26-eye-trainer/index.html"
   },
   {
-    "revision": "6f101b91ccac27168372",
+    "revision": "65a34fac01a7e8c3da06",
     "url": "https://dkchv.github.io/ld26-eye-trainer/static/css/main.26eb593c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://dkchv.github.io/ld26-eye-trainer/static/js/2.3c02e88f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6f101b91ccac27168372",
-    "url": "https://dkchv.github.io/ld26-eye-trainer/static/js/main.09804742.chunk.js"
+    "revision": "65a34fac01a7e8c3da06",
+    "url": "https://dkchv.github.io/ld26-eye-trainer/static/js/main.6e5a82dc.chunk.js"
   },
   {
     "revision": "03199d3f415588443f18",
