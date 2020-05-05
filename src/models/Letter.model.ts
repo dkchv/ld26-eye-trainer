@@ -29,8 +29,8 @@ export function wordParse(value: string): string {
 }
 
 export const LetterPositionMap2: PositionTypes[][] = [
-  [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Left ], // А
-  [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Right ], // Б
+  [ PositionTypes.Top, PositionTypes.Top, PositionTypes.Top ], // А
+  [ PositionTypes.Bottom, PositionTypes.Bottom, PositionTypes.Bottom ], // Б
   [ PositionTypes.Left, PositionTypes.Bottom, PositionTypes.Left ], // В
   [ PositionTypes.Left, PositionTypes.Bottom, PositionTypes.Right ], // Г
   [ PositionTypes.Left, PositionTypes.Left, PositionTypes.Top ], // Д
@@ -40,10 +40,10 @@ export const LetterPositionMap2: PositionTypes[][] = [
   [ PositionTypes.Right, PositionTypes.Bottom, PositionTypes.Left ], // З
   [ PositionTypes.Right, PositionTypes.Bottom, PositionTypes.Right ], // И
   [ PositionTypes.Right, PositionTypes.Bottom, PositionTypes.Right, PositionTypes.Right ], // Й
-  [ PositionTypes.Right, PositionTypes.Right, PositionTypes.Bottom ], // К
+  [ PositionTypes.Right, PositionTypes.Right, PositionTypes.Right ], // К
   [ PositionTypes.Top, PositionTypes.Left, PositionTypes.Left ], // Л
   [ PositionTypes.Top, PositionTypes.Left, PositionTypes.Top ], // М
-  [ PositionTypes.Top, PositionTypes.Left, PositionTypes.Bottom ], // Н
+  [ PositionTypes.Left, PositionTypes.Left, PositionTypes.Left ], // Н
   [ PositionTypes.Top, PositionTypes.Right, PositionTypes.Right ], // О
   [ PositionTypes.Top, PositionTypes.Right, PositionTypes.Top ], // П
   [ PositionTypes.Top, PositionTypes.Right, PositionTypes.Bottom ], // Р
@@ -52,10 +52,10 @@ export const LetterPositionMap2: PositionTypes[][] = [
   [ PositionTypes.Bottom, PositionTypes.Left, PositionTypes.Bottom ], // У
   [ PositionTypes.Right, PositionTypes.Top, PositionTypes.Left ], // Ф
   [ PositionTypes.Bottom, PositionTypes.Right, PositionTypes.Top ], // Х
-  [ PositionTypes.Left, PositionTypes.Left, PositionTypes.Top, PositionTypes.Top ], // Ц
-  [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Right, PositionTypes.Right ], // Ч
-  [ PositionTypes.Left, PositionTypes.Bottom, PositionTypes.Left, PositionTypes.Left ], // Ш
-  [ PositionTypes.Left, PositionTypes.Bottom, PositionTypes.Right, PositionTypes.Right ], // Щ
+  [ PositionTypes.Top, PositionTypes.Left, PositionTypes.Bottom ], // Ц
+  [ PositionTypes.Right, PositionTypes.Right, PositionTypes.Bottom ], // Ч
+  [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Left ], // Ш
+  [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Right ], // Щ
   [ PositionTypes.Left, PositionTypes.Left, PositionTypes.Bottom, PositionTypes.Bottom ], // Ы
   [ PositionTypes.Bottom, PositionTypes.Right, PositionTypes.Bottom ], // Э
   [ PositionTypes.Bottom, PositionTypes.Right, PositionTypes.Right ], // Ю
