@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://dkchv.github.io/ld26-eye-trainer/precache-manifest.6c36e612f0270c2bd1432c243a88c3ca.js"
+  "https://dkchv.github.io/ld26-eye-trainer/precache-manifest.c20a041f0a72c17c54afdbbaa3c140ff.js"
 );
 
 self.addEventListener('message', (event) => {
