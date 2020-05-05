@@ -1,7 +1,7 @@
-import CSS from '../TrainerLetter/TrainerLetter.module.scss';
+import CSS from '../TrainerWord/TrainerWord.module.scss';
 import React, { useCallback, useEffect, useState } from 'react';
 import { getRandomWordQueue } from '../../models/Letter.model';
-import { CssPositionMap } from '../TrainerLetter/TrainerLetter';
+import { CssPositionMap } from '../TrainerWord/TrainerWord';
 import { useSelector } from 'react-redux';
 import { selectConfigStore } from '../../state/config.selectors';
 

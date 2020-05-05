@@ -1,6 +1,6 @@
 import React from 'react';
 import { TrainerTypes } from '../../models/Trainer.model';
-import { TrainerLetter } from '../../components/TrainerLetter/TrainerLetter';
+import { TrainerWord } from '../../components/TrainerWord/TrainerWord';
 import { TrainerRandomLetter } from '../../components/TrainerRandomLetter/TrainerRandomLetter';
 import { useSelector } from 'react-redux';
 import { selectConfigStore } from '../../state/config.selectors';
@@ -10,12 +10,12 @@ export function Trainer() {
 
   switch (config.type) {
     case TrainerTypes.LetterToMovement:
-      return <TrainerLetter />
+      return <TrainerWord />
     case TrainerTypes.MovementToLetter:
-      return <TrainerLetter />;
+      return <TrainerWord />;
     case TrainerTypes.RandomLetter:
       return <TrainerRandomLetter />;
     default:
-      return <TrainerLetter/>;
+      return <TrainerWord/>;
   }
 }

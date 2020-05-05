@@ -67,3 +67,24 @@
     top: 100%;
   }
 }
+
+.word {
+  margin: auto;
+  position: relative;
+
+  &:hover {
+    .editButton {
+      color: $color-blue;
+    }
+  }
+}
+
+.editButton {
+  position: absolute;
+  min-width: 1rem;
+  min-height: 1rem;
+  color: transparent;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}

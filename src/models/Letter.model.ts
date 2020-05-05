@@ -14,6 +14,20 @@ export interface PositionTick {
 
 export const AlphaBet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЭЮЯ';
 
+export function wordParse(value: string): string {
+  if (!value) {
+    return '';
+  }
+
+  return Array.from(value).map((item) => {
+    const foundIndex = AlphaBet.indexOf(item.toUpperCase());
+    if (foundIndex === -1) {
+      return '_';
+    }
+    return item.toUpperCase();
+  }).join('');
+}
+
 export const LetterPositionMap2: PositionTypes[][] = [
   [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Left ], // А
   [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Right ], // Б
@@ -81,10 +95,16 @@ export function getWordQueue(value: string): PositionTick[] {
   Array.from(value).forEach((letter: string, index) => {
     const letterQueue = getLetterQueue(letter);
     if (!letterQueue) {
-      res.push(LetterErrorTick);
       res.push({
-        ...LetterPauseTick,
+        position: PositionTypes.Center,
         letter: '?',
+        index,
+      });
+      // just long pause
+      res.push({
+        position: PositionTypes.Center,
+        letter: '?',
+        index,
       });
       return;
     }
