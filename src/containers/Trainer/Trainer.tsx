@@ -4,6 +4,7 @@ import { TrainerWord } from '../../components/TrainerWord/TrainerWord';
 import { TrainerRandomLetter } from '../../components/TrainerRandomLetter/TrainerRandomLetter';
 import { useSelector } from 'react-redux';
 import { selectConfigStore } from '../../state/config.selectors';
+import { TrainerMovement } from '../../components/TrainerMovement/TrainerMovement';
 
 export function Trainer() {
   const config = useSelector(selectConfigStore);
@@ -12,7 +13,7 @@ export function Trainer() {
     case TrainerTypes.LetterToMovement:
       return <TrainerWord />
     case TrainerTypes.MovementToLetter:
-      return <TrainerWord />;
+      return <TrainerMovement />;
     case TrainerTypes.RandomLetter:
       return <TrainerRandomLetter />;
     default:

@@ -15,7 +15,6 @@ export const TrainerMetaMap = {
   },
   [TrainerTypes.MovementToLetter]: {
     header: 'Движения → буквы',
-    disabled: true,
   },
   [TrainerTypes.RandomLetter]: {
     header: 'Случайные буквы',

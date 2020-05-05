@@ -2,7 +2,7 @@ import { ConfigActionTypes } from './config.action';
 import { TrainerConfig, TrainerTypes } from '../models/Trainer.model';
 
 const initialState: TrainerConfig = {
-  type: TrainerTypes.LetterToMovement,
+  type: TrainerTypes.MovementToLetter,
   speed: 600,
 };
 

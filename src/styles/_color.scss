@@ -1,0 +1,8 @@
+
+.color-blue {
+  color: $color-blue;
+}
+
+.color-gray {
+  color: darken($color-foreground, 50%);
+}

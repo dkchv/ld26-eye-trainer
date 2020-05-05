@@ -132,3 +132,20 @@ export function getRandomWordQueue(length: number = 20) {
   }).join('');
   return getWordQueue(word);
 }
+
+export function getLetter(queue: PositionTypes[]): null | string {
+  if (queue.length < 3 || queue.length > 4) {
+    return null;
+  }
+
+  const letterIndex = LetterPositionMap2.findIndex((positions) => {
+    return positions.every((item, index) => {
+      return item === queue[index];
+    })
+  })
+  if (letterIndex === -1) {
+    return null;
+  }
+
+  return AlphaBet[letterIndex];
+}
