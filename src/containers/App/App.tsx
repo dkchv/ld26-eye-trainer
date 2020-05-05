@@ -1,6 +1,6 @@
 import { Layout } from '../../components/Layout/Layout';
 import { AppRouter } from '../../App.router';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from '../../state/store';
@@ -8,11 +8,11 @@ import { store } from '../../state/store';
 export function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <MemoryRouter>
         <Layout>
           <AppRouter />
         </Layout>
-      </BrowserRouter>
+      </MemoryRouter>
     </Provider>
   );
 }
