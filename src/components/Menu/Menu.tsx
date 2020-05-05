@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiSettings, FiChevronLeft } from 'react-icons/fi';
+import { FiSettings, FiChevronLeft, FiType } from 'react-icons/fi';
 import CSS from './Menu.module.scss';
 
 export type MenuProps = {
@@ -17,14 +17,19 @@ export function Menu({ title }: MenuProps) {
 
   return (
     <div className={`${CSS.root} d-flex ai-center fg-1`}>
-      <div className={`${CSS.back} fg-0`}>
+      <div className={`${CSS.back} col fg-0`}>
         {isBack && (
           <Link to='/' className='button-icon'><FiChevronLeft/></Link>
         )}
       </div>
 
-      <div className='d-flex fg-1 jc-center'>{title}</div>
-      <div className='fg-0'>
+      <div className='col d-flex fg-1 jc-center'>{title}</div>
+      <div className='col fg-0'>
+        <Link to='/alphabet' className='button-icon'>
+          <FiType />
+        </Link>
+      </div>
+      <div className='col fg-0'>
         <Link to='/settings' className='button-icon'>
           <FiSettings />
         </Link>

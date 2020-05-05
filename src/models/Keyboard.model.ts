@@ -34,4 +34,10 @@ export const KeyMap: Key[] = [
     symbol: '↓',
     position: PositionTypes.Bottom,
   },
+  {
+    id: 'Space',
+    keyCode: 32,
+    symbol: '•',
+    position: PositionTypes.Center,
+  }
 ];
