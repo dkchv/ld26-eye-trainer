@@ -4,6 +4,8 @@ import './styles/styles.scss';
 import * as serviceWorker from './serviceWorker';
 import { App } from './containers/App/App';
 
+console.log('LD26 Eye trainer version:', process.env.REACT_APP_VERSION || 'local');
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
