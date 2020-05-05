@@ -12,7 +12,7 @@ export interface PositionTick {
   position: PositionTypes;
 }
 
-export const AlphaBet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЭЮЯ';
+export const AlphaBet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЭЮЯ ';
 
 export function wordParse(value: string): string {
   if (!value) {
@@ -60,6 +60,7 @@ export const LetterPositionMap2: PositionTypes[][] = [
   [ PositionTypes.Bottom, PositionTypes.Right, PositionTypes.Bottom ], // Э
   [ PositionTypes.Bottom, PositionTypes.Right, PositionTypes.Right ], // Ю
   [ PositionTypes.Right, PositionTypes.Right, PositionTypes.Top ], // Я
+  [ PositionTypes.Center, PositionTypes.Center ] // space
 ];
 
 export function getLetterQueue(value: string): PositionTypes[] | null {
