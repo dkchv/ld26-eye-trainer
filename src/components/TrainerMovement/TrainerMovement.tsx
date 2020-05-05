@@ -31,8 +31,8 @@ export function TrainerMovement() {
     const queue = newMovement.map((item) => item.position) as PositionTypes[];
     const foundLetter = getLetter(queue);
     if (foundLetter) {
-      const newLetters = letters.length > 15
-        ? [ '...', ...letters.splice(-5), foundLetter ]
+      const newLetters = letters.length > 10
+        ? [ '...', ...letters.splice(-3), foundLetter ]
         : [ ...letters, foundLetter ];
       setLetters(newLetters);
       setMovements([]);
