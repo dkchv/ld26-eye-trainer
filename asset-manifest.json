@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "https://dkchv.github.io/ld26-eye-trainer/static/css/main.6dc83449.chunk.css",
-    "main.js": "https://dkchv.github.io/ld26-eye-trainer/static/js/main.de3139b7.chunk.js",
-    "main.js.map": "https://dkchv.github.io/ld26-eye-trainer/static/js/main.de3139b7.chunk.js.map",
+    "main.js": "https://dkchv.github.io/ld26-eye-trainer/static/js/main.dff0853a.chunk.js",
+    "main.js.map": "https://dkchv.github.io/ld26-eye-trainer/static/js/main.dff0853a.chunk.js.map",
     "runtime-main.js": "https://dkchv.github.io/ld26-eye-trainer/static/js/runtime-main.1c452af3.js",
     "runtime-main.js.map": "https://dkchv.github.io/ld26-eye-trainer/static/js/runtime-main.1c452af3.js.map",
     "static/js/2.141666e4.chunk.js": "https://dkchv.github.io/ld26-eye-trainer/static/js/2.141666e4.chunk.js",
     "static/js/2.141666e4.chunk.js.map": "https://dkchv.github.io/ld26-eye-trainer/static/js/2.141666e4.chunk.js.map",
     "index.html": "https://dkchv.github.io/ld26-eye-trainer/index.html",
-    "precache-manifest.ba46efd8cf28aa05b6e7519fa7521684.js": "https://dkchv.github.io/ld26-eye-trainer/precache-manifest.ba46efd8cf28aa05b6e7519fa7521684.js",
+    "precache-manifest.7b86a96bcd3f3547c42496341b0cbf57.js": "https://dkchv.github.io/ld26-eye-trainer/precache-manifest.7b86a96bcd3f3547c42496341b0cbf57.js",
     "service-worker.js": "https://dkchv.github.io/ld26-eye-trainer/service-worker.js",
     "static/css/main.6dc83449.chunk.css.map": "https://dkchv.github.io/ld26-eye-trainer/static/css/main.6dc83449.chunk.css.map",
     "static/js/2.141666e4.chunk.js.LICENSE.txt": "https://dkchv.github.io/ld26-eye-trainer/static/js/2.141666e4.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1c452af3.js",
     "static/js/2.141666e4.chunk.js",
     "static/css/main.6dc83449.chunk.css",
-    "static/js/main.de3139b7.chunk.js"
+    "static/js/main.dff0853a.chunk.js"
   ]
 }
