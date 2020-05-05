@@ -40,7 +40,7 @@
   background-color: $color-foreground;
   transform: translate(-50%, -50%);
   border-radius: 1rem;
-  z-index: 3;
+  z-index: 2;
 }
 
 .placeholder {
@@ -50,7 +50,7 @@
   transform: translate(-50%, -50%);
   border-radius: 1rem;
   border: 1px solid $color-blue;
-  z-index: 2;
+  z-index: 3;
   cursor: pointer;
   user-select: none;
 }
