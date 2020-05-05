@@ -76,7 +76,6 @@ export function getLetterQueue(value: string): PositionTypes[] | null {
   return LetterPositionMap2[letterIndex];
 }
 
-
 export const LetterErrorTick: PositionTick = {
   letter: '?',
   position: PositionTypes.Center,
