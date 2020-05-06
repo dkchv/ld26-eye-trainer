@@ -29,6 +29,8 @@ export function wordParse(value: string): string {
 }
 
 export const LetterPositionMap2: PositionTypes[][] = [
+  // TODO @dkchv: !!!
+  // [ PositionTypes.Left, PositionTypes.Left, PositionTypes.Left ], // А
   [ PositionTypes.Top, PositionTypes.Top, PositionTypes.Top ], // А
   [ PositionTypes.Bottom, PositionTypes.Bottom, PositionTypes.Bottom ], // Б
   [ PositionTypes.Left, PositionTypes.Bottom, PositionTypes.Left ], // В

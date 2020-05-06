@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+
+.map {
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  border: 1px solid $color-blue;
+}
+
+$step: 10vh;
+$width: 2px;
+
+.letter {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.vector {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.top {
+  transform: translateY(-$step);
+  position: absolute;
+  width: $width;
+  background-color: $color-blue;
+  height: $step;
+}
+
+.right {
+  position: absolute;
+  width: $step;
+  height: $width;
+  padding-left: $step;
+  background-color: $color-blue;
+}
+
+.left {
+  transform: translateX(-$step);
+  position: absolute;
+  width: $step;
+  background-color: $color-blue;
+  height: $width;
+}
+
+.bottom {
+  //transform: translateY($step);
+  position: absolute;
+  width: $width;
+  background-color: $color-blue;
+  height: $step;
+  padding-top: $step;
+}
