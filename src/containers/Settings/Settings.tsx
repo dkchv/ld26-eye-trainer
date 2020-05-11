@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import { appVersion } from '../../models/App.model';
 import { ConfigUpdate } from '../../state/config.action';
 import { TrainerMetaMap, TrainerTypes } from '../../models/Trainer.model';
 import classNames from 'classnames';
@@ -23,7 +24,7 @@ export function Settings() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className='fg-1'>
       {/* type */}
       <div className='row'>
         <div className='row fs-small'>Тип тренировки:</div>
@@ -50,12 +51,17 @@ export function Settings() {
           })}
         </div>
       </div>
+      <div className='row divider' />
       {/* speed */}
       <div className='row'>
         <div className='row fs-small'>Скорость движения (сек)</div>
         <div className='row'>
           <input type='number' min='0' max='5' step='0.1' value={config.speed / 1000} onChange={handleSpeedChange} />
         </div>
+      </div>
+      <div className='row divider' />
+      <div className='row color-gray fs-small'>
+        App version: {appVersion}
       </div>
     </div>
   );

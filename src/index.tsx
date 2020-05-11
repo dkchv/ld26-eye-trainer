@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/styles.scss';
+import { appVersion } from './models/App.model';
 import * as serviceWorker from './serviceWorker';
 import { App } from './containers/App/App';
 
-console.log('LD26 Eye trainer version:', process.env.REACT_APP_VERSION || 'local');
+console.log('LD26 Eye trainer version:', appVersion);
 
 ReactDOM.render(
   <React.StrictMode>
