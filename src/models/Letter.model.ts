@@ -12,7 +12,7 @@ export interface PositionTick {
   position: PositionTypes;
 }
 
-export const AlphaBet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЭЮЯ ';
+export const AlphaBet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ? ';
 
 export function wordParse(value: string): string {
   if (!value) {
@@ -35,11 +35,11 @@ export const LetterPositionMap2: PositionTypes[][] = [
   [ PositionTypes.Left, PositionTypes.Bottom, PositionTypes.Right ], // Г
   [ PositionTypes.Left, PositionTypes.Left, PositionTypes.Top ], // Д
   [ PositionTypes.Left, PositionTypes.Left, PositionTypes.Bottom ], // Е
-  [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Left, PositionTypes.Left ], // Ё
+  [ PositionTypes.Top, PositionTypes.Top, PositionTypes.Left ], // Ё
   [ PositionTypes.Right, PositionTypes.Top, PositionTypes.Right ], // Ж
   [ PositionTypes.Right, PositionTypes.Bottom, PositionTypes.Left ], // З
   [ PositionTypes.Right, PositionTypes.Bottom, PositionTypes.Right ], // И
-  [ PositionTypes.Right, PositionTypes.Bottom, PositionTypes.Right, PositionTypes.Right ], // Й
+  [ PositionTypes.Bottom, PositionTypes.Bottom, PositionTypes.Left ], // Й
   [ PositionTypes.Right, PositionTypes.Right, PositionTypes.Right ], // К
   [ PositionTypes.Top, PositionTypes.Left, PositionTypes.Left ], // Л
   [ PositionTypes.Top, PositionTypes.Left, PositionTypes.Top ], // М
@@ -56,10 +56,13 @@ export const LetterPositionMap2: PositionTypes[][] = [
   [ PositionTypes.Right, PositionTypes.Right, PositionTypes.Bottom ], // Ч
   [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Left ], // Ш
   [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Right ], // Щ
-  [ PositionTypes.Left, PositionTypes.Left, PositionTypes.Bottom, PositionTypes.Bottom ], // Ы
+  [ PositionTypes.Bottom, PositionTypes.Bottom, PositionTypes.Right ], // Ъ
+  [ PositionTypes.Top, PositionTypes.Top, PositionTypes.Right ], // Ы
+  [ PositionTypes.Left, PositionTypes.Top, PositionTypes.Top ], // Ь
   [ PositionTypes.Bottom, PositionTypes.Right, PositionTypes.Bottom ], // Э
   [ PositionTypes.Bottom, PositionTypes.Right, PositionTypes.Right ], // Ю
   [ PositionTypes.Right, PositionTypes.Right, PositionTypes.Top ], // Я
+  [ PositionTypes.Right, PositionTypes.Top, PositionTypes.Top ], // ?
   [ PositionTypes.Center, PositionTypes.Center ] // space
 ];
 
