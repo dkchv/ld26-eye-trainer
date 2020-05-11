@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://dkchv.github.io/ld26-eye-trainer/precache-manifest.6f033eba6fcfcb1fe80920cbbf6a1799.js"
+  "https://dkchv.github.io/ld26-eye-trainer/precache-manifest.4fac25ef9f80e8704fd11f3f5f2a365e.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -35,5 +35,5 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("https://dkchv.github.io/ld26-eye-trainer/index.html"), {
   
-  blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
+  blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
 });
