@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Demo
+
+Live demo here [https://dkchv.github.io/ld26-eye-trainer/](https://dkchv.github.io/ld26-eye-trainer/).
+
 ## Available Scripts
 
 In the project directory, you can run:
