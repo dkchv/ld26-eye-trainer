@@ -13,6 +13,12 @@
   }
 }
 
+.row-05 {
+  & + & {
+    margin-top: 0.5rem;
+  }
+}
+
 .row-divided {
   & + & {
     border-top: 1px solid darken($color-background, 5%);

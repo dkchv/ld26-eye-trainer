@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/styles.scss';
-import { appVersion } from './models/App.model';
+import { appVersion, App } from 'features/App';
 import * as serviceWorker from './serviceWorker';
-import { App } from './containers/App/App';
 
 console.log('LD26 Eye trainer version:', appVersion);
 
