@@ -1,1 +1,1 @@
-export * from './containers/AlarmClock/AlarmClock';
+export * from './AlarmClock.router';

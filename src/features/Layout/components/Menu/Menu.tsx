@@ -1,7 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
-import { Link, useLocation, useRouteMatch, useHistory } from 'react-router-dom';
-import { MenuItem } from '../../../../models/Menu.model';
+import { Link, useLocation } from 'react-router-dom';
+import { useParentHandler } from '../../hooks/useBack';
+import { MenuItem } from '../../models/Menu.model';
 import CSS from './Menu.module.scss';
 
 export interface MenuProps {
@@ -10,8 +11,6 @@ export interface MenuProps {
 }
 
 export function Menu({ title, menu }: MenuProps) {
-  const match = useRouteMatch();
-  const history = useHistory();
   const location = useLocation();
   const [ isBack, setIsBack ] = useState(false);
 
@@ -19,13 +18,7 @@ export function Menu({ title, menu }: MenuProps) {
     setIsBack(location.pathname !== '/');
   }, [ location ]);
 
-  console.log('--l', location.pathname, match.url, match.path);
-
-  const handleBack = useCallback(() => {
-    history.push(location.pathname === match.path
-      ? '/'
-      : match.url);
-  }, [ history, match, location ]);
+  const handleBack = useParentHandler();
 
   return (
     <div className={`${CSS.root} d-flex ai-center fg-1`}>

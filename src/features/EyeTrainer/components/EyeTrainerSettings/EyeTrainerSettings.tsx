@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectConfigStore } from '../../state/EyeTrainer.selectors';
 
-export function Settings() {
+export function EyeTrainerSettings() {
   const dispatch = useDispatch();
   const config = useSelector(selectConfigStore);
 
@@ -19,7 +19,7 @@ export function Settings() {
 
   const handleSpeedChange = useCallback((e) => {
     dispatch(EyeTrainerConfigUpdate({
-      speed: Number(e.target.value) * 1000,
+      speed: Number(e.target.value),
     }))
   }, [dispatch]);
 
@@ -54,9 +54,9 @@ export function Settings() {
       <div className='row divider' />
       {/* speed */}
       <div className='row'>
-        <div className='row fs-small'>Скорость движения (сек)</div>
+        <div className='row fs-small'>Скорость движения (мс)</div>
         <div className='row'>
-          <input type='number' min='0' max='5' step='0.1' value={config.speed / 1000} onChange={handleSpeedChange} />
+          <input type='number' min='0' max='5000' step='500' value={config.speed} onChange={handleSpeedChange} />
         </div>
       </div>
       <div className='row divider' />

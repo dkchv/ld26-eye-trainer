@@ -7,8 +7,8 @@ export function Alphabet() {
   const [ letters ] = useState(Array.from(AlphaBet));
   return (
     <div className='fg-1'>
-      {letters.map((letter) => (
-        <div className='row row-divided d-flex ai-center'>
+      {letters.map((letter, index) => (
+        <div key={index} className='row row-divided d-flex ai-center'>
           <div className={`${CSS.letter} col`}>{letter}</div>
           <div className='col d-flex'>
             {(getLetterQueue(letter) as PositionTypes[]).map((position, index) => {

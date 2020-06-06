@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiSettings, FiType } from 'react-icons/all';
-import { MenuItem } from '../../models/Menu.model';
+import { MenuItem } from '../Layout/models/Menu.model';
 
 
 export function getEyeTrainerMenu(match: string): MenuItem[] {

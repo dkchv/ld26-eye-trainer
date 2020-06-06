@@ -1,2 +1,2 @@
 
-export const mapAction = (type: string) => (payload) => (dispatch) => dispatch({ type, payload });
+export const mapAction = <T>(type: string) => (payload: T) => (dispatch) => dispatch({ type, payload });

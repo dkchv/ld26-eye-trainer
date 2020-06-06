@@ -3,7 +3,7 @@ import { EyeTrainerActionTypes } from './EyeTrainer.store';
 
 const initialState: EyeTrainerConfig = {
   type: EyeTrainerTypes.MovementToLetter,
-  speed: 600,
+  speed: 500,
 };
 
 export function eyeTrainerReducer(state: EyeTrainerConfig = initialState, action) {
