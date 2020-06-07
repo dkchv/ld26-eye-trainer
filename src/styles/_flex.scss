@@ -11,10 +11,27 @@
   flex-grow: 0;
 }
 
+.fsh-0 {
+  flex-shrink: 0;
+}
+
 .ai-center {
   align-items: center;
 }
 
+.ai-end {
+  align-items: flex-end;
+}
+
 .jc-center {
   justify-content: center;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.fd-column {
+  flex-direction: column;
+  min-height: 0
 }

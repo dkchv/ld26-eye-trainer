@@ -42,3 +42,13 @@
   height: 1px;
   background-color: lighten($color-background, 10%);
 }
+
+.scroll-y {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.inset-right {
+  margin-right: -1rem;
+  padding-right: 1rem;
+}
