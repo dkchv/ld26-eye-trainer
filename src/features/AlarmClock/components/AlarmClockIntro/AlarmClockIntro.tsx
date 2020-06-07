@@ -6,7 +6,7 @@ export function AlarmClockIntro({ match }) {
     <div>
       <div className='row'>Intro description here</div>
       <div className='row'>
-        <Link to={`${match.url}/settings`}>skip</Link>
+        <Link to={`${match.url}/settings`}>Skip →</Link>
       </div>
     </div>
   );
