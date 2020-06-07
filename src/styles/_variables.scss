@@ -1,5 +1,7 @@
 
-$color-blue: #3183FF;
-
 $color-background: #222222;
 $color-foreground: #ffffff;
+
+$color-blue: #3183FF;
+$color-secondary: lighten($color-background, 10%);
+$color-gray: darken($color-foreground, 50%);

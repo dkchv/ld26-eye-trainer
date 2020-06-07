@@ -1,0 +1,26 @@
+@import "styles/_variables";
+
+.root {
+  display: inline-block;
+  border-radius: 0.25rem;
+  color: $color-foreground;
+}
+
+.button {
+  background-color: inherit;
+  color: currentColor;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: $color-blue;
+}
+
+.secondary {
+  background-color: $color-secondary;
+}

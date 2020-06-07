@@ -1,6 +1,5 @@
-import { Button } from '@material-ui/core';
+import { Button } from 'features/UI';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export function AlarmClockIntro({ match }) {
   return (
@@ -11,11 +10,11 @@ export function AlarmClockIntro({ match }) {
 
       <div className='row fg-0 fsh-0 d-flex fd-column ai-end'>
         <div className='row divider' />
-        <Link className='row' to={`${match.url}/settings`}>
-          <Button variant="contained" color="primary">
+        <div className='row'>
+          <Button color='secondary' to={`${match.url}/settings`}>
             Skip →
           </Button>
-        </Link>
+        </div>
       </div>
     </div>
   );
