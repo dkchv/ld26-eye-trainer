@@ -2,7 +2,7 @@ import { LayoutActionTypes, LayoutState } from './Layout.store';
 
 const initialState: LayoutState = {
   menu: [],
-  title: 'Loading..',
+  title: '',
   isTopBar: true,
 };
 
